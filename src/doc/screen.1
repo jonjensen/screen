@@ -1669,12 +1669,6 @@ Same as the \fBwritelock\fP command except that the default setting for new
 windows is changed. Initially writelocks will off.
 .sp
 .ne 3
-.BR "defzombie " [\fIkeys\fP]
-.PP
-Synonym to the \fBzombie\fP command. Both currently change the default.
-See there.
-.sp
-.ne 3
 .B detach
 .RB [ -h ]
 .PP
@@ -3510,8 +3504,6 @@ Note also that this is an experimental feature.
 .sp
 .ne 3
 .BR "zombie " [\fIkeys\fP [ onerror ] ]
-.br
-.BR "defzombie " [\fIkeys\fP]
 .PP
 Per default
 .I screen 
@@ -3528,8 +3520,7 @@ without parameters will clear the zombie setting, thus making windows disappear
 when their process exits.
 
 As the zombie-setting is manipulated globally for all windows, this command 
-should only be called \fBdefzombie\fP. Until we need this as a per window 
-setting, the commands \fBzombie\fP and \fBdefzombie\fP are synonymous.
+should probably be called \fBdefzombie\fP, but it isn't.
 
 Optionally you can put the word \*Qonerror\*U after the keys. This will cause screen
 to monitor exit status of the process running in the window. If it exits normally ('0'), 
